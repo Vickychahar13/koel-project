@@ -1,0 +1,136 @@
+<?php
+
+namespace PhanAn\Poddle;
+
+use Generator;
+use GuzzleHttp\Psr7\Request;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
+use PhanAn\Poddle\Enums\PodcastType;
+use PhanAn\Poddle\Values\CategoryCollection;
+use PhanAn\Poddle\Values\Channel;
+use PhanAn\Poddle\Values\ChannelMetadata;
+use PhanAn\Poddle\Values\Episode;
+use PhanAn\Poddle\Values\EpisodeCollection;
+use PhanAn\Poddle\Values\FundingCollection;
+use PhanAn\Poddle\Values\TxtCollection;
+use Psr\Http\Client\ClientInterface;
+use Saloon\XmlWrangler\XmlReader;
+use Throwable;
+
+class Poddle
+{
+    public readonly XmlReader $xmlReader;
+
+    public function __construct(public readonly string $xml)
+    {
+        $this->xmlReader = XmlReader::fromString($xml);
+    }
+
+    public static function fromUrl(string $url, int $timeoutInSeconds = 30, ?ClientInterface $client = null): self
+    {
+        $xml = $client
+            ? $client->sendRequest(new Request('GET', $url, ['timeout' => (string) $timeoutInSeconds]))->getBody()
+            : Http::timeout($timeoutInSeconds)->get($url)->body();
+
+        return new self((string) $xml);
+    }
+
+    public static function fromXml(string $xml): self
+    {
+        return new self($xml);
+    }
+
+    public function getChannel(): Channel
+    {
+        return new Channel(
+            url: (string) $this->getSoleValue('atom:link@href'),
+            title: (string) $this->getSoleValue('title'),
+            description: (string) $this->getSoleValue('description'),
+            link: (string) $this->getSoleValue('link'),
+            language: (string) $this->getSoleValue('language'),
+            categories: $this->getCategories(),
+            explicit: $this->getSoleValue('itunes:explicit') === 'yes',
+            image: (string) $this->getSoleValue('itunes:image@href'),
+            metadata: $this->getMetadata(),
+        );
+    }
+
+    public function getEpisodes(bool $ignoreInvalids = false): EpisodeCollection
+    {
+        return new EpisodeCollection(function () use ($ignoreInvalids): Generator {
+            foreach ($this->xmlReader->element('rss.channel.item')->collectLazy() as $item) {
+                try {
+                    yield Episode::fromXmlElement($item);
+                } catch (Throwable $e) {
+                    if ($ignoreInvalids) {
+                        continue;
+                    }
+
+                    throw $e;
+                }
+            }
+        });
+    }
+
+    private function getSoleValue(string ...$queries): ?string
+    {
+        try {
+            foreach ($queries as $query) {
+                if (!Str::startsWith('/rss/channel/', $query)) {
+                    $query = '/rss/channel/' . ltrim($query, '/');
+                }
+
+                if (Str::contains($query, '@')) {
+                    [$query, $attribute] = explode('@', $query, 2);
+                    $value = $this->xmlReader->xpathElement($query)->first()?->getAttribute($attribute);
+                } else {
+                    $value = $this->xmlReader->xpathValue($query)->first();
+                }
+
+                if ($value) {
+                    return $value;
+                }
+            }
+
+            return null;
+        } catch (Throwable) {
+            return null;
+        }
+    }
+
+    private function getMetadata(): ChannelMetadata
+    {
+        return new ChannelMetadata(
+            locked: $this->getSoleValue('podcast:locked') === 'yes',
+            guid: $this->getSoleValue('podcast:guid'),
+            author: $this->getSoleValue('itunes:author'),
+            copyright: $this->getSoleValue('copyright'),
+            txts: $this->getTxts(),
+            fundings: $this->getFundings(),
+            type: PodcastType::tryFrom($this->getSoleValue('itunes:type') ?? ''),
+            complete: $this->getSoleValue('itunes:complete') === 'yes',
+        );
+    }
+
+    private function getFundings(): FundingCollection
+    {
+        return FundingCollection::fromXmlElements(
+            $this->xmlReader->element('rss.channel.podcast:funding')->collectLazy()
+        );
+    }
+
+    private function getCategories(): CategoryCollection
+    {
+        return CategoryCollection::fromXmlElements(
+            $this->xmlReader->element('rss.channel.itunes:category')->collectLazy()
+        );
+    }
+
+    private function getTxts(): TxtCollection
+    {
+        return TxtCollection::fromXmlElements(
+            $this->xmlReader->element('rss.channel.podcast:txt')->collectLazy()
+        );
+    }
+}

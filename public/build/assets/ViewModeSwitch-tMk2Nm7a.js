@@ -1,0 +1,11 @@
+import{g as c,ai as y,U as v,o,j as l,V as a,n as r,k as i,aD as n,y as u,p as h,_ as w}from"./socketService-CLOoMCW2.js";import{c as m}from"./app-BTCGkzLq.js";/**
+ * @license lucide-vue-next v0.452.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const x=m("LayoutGridIcon",[["rect",{width:"7",height:"7",x:"3",y:"3",rx:"1",key:"1g98yp"}],["rect",{width:"7",height:"7",x:"14",y:"3",rx:"1",key:"6d4xhi"}],["rect",{width:"7",height:"7",x:"14",y:"14",rx:"1",key:"nxv5o0"}],["rect",{width:"7",height:"7",x:"3",y:"14",rx:"1",key:"1bb6yr"}]]);/**
+ * @license lucide-vue-next v0.452.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const b=m("LayoutListIcon",[["rect",{width:"7",height:"7",x:"3",y:"3",rx:"1",key:"1g98yp"}],["rect",{width:"7",height:"7",x:"3",y:"14",rx:"1",key:"1bb6yr"}],["path",{d:"M14 4h7",key:"3xa0d5"}],["path",{d:"M14 9h7",key:"1icrd9"}],["path",{d:"M14 15h7",key:"1mj8o2"}],["path",{d:"M14 20h7",key:"11slyb"}]]),k={class:"flex w-[64px] border border-solid border-k-fg-20 rounded-md overflow-hidden"},V=c({__name:"ViewModeSwitch",props:{modelValue:{default:"thumbnails"},modelModifiers:{}},emits:["update:modelValue"],setup(p){const t=y(p,"modelValue");return(f,e)=>{const d=v("koel-tooltip");return o(),l("span",k,[a((o(),l("label",{class:r([{active:t.value==="thumbnails"},"thumbnails"]),"data-testid":"view-mode-thumbnails",title:"View as thumbnails"},[a(i("input",{"onUpdate:modelValue":e[0]||(e[0]=s=>t.value=s),class:"hidden",name:"view-mode",type:"radio",value:"thumbnails"},null,512),[[n,t.value]]),u(h(x),{size:16}),e[2]||(e[2]=i("span",{class:"hidden"},"View as thumbnails",-1))],2)),[[d]]),a((o(),l("label",{class:r([{active:t.value==="list"},"list"]),"data-testid":"view-mode-list",title:"View as list"},[a(i("input",{"onUpdate:modelValue":e[1]||(e[1]=s=>t.value=s),class:"hidden",name:"view-mode",type:"radio",value:"list"},null,512),[[n,t.value]]),u(h(b),{size:16}),e[3]||(e[3]=i("span",{class:"hidden"},"View as list",-1))],2)),[[d]])])}}}),_=w(V,[["__scopeId","data-v-f8a3547f"]]);export{_ as V};

@@ -1,0 +1,1 @@
+import{_ as n,o,j as t,a2 as r}from"./socketService-CLOoMCW2.js";const s={},a={class:"btn-group inline-flex relative flex-nowrap"};function c(e,_){return o(),t("span",a,[r(e.$slots,"default",{},void 0,!0)])}const f=n(s,[["render",c],["__scopeId","data-v-10e389f5"]]);export{f as B};

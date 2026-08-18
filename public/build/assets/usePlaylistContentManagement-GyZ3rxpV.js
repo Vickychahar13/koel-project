@@ -1,0 +1,6 @@
+import{c as m}from"./app-BTCGkzLq.js";import{d as c}from"./commonStore-Ci34ZhMx.js";import{I as a,am as i}from"./socketService-CLOoMCW2.js";import{c as d,u}from"./useOverlay-BzcBPr66.js";/**
+ * @license lucide-vue-next v0.452.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const C=m("MicVocalIcon",[["path",{d:"m11 7.601-5.994 8.19a1 1 0 0 0 .1 1.298l.817.818a1 1 0 0 0 1.314.087L15.09 12",key:"80a601"}],["path",{d:"M16.5 21.174C15.5 20.5 14.372 20 13 20c-2.058 0-3.928 2.356-6 2-2.072-.356-2.775-3.369-1.5-4.5",key:"j0ngtp"}],["circle",{cx:"16",cy:"7",r:"5",key:"d08jfb"}]]),I=()=>{const{handleHttpError:r}=d("dialog"),{toastSuccess:n}=u(),s=t=>{switch(i(t)){case"songs":return t.length===1?"Song":"Songs";case"episodes":return t.length===1?"Episode":"Episodes";default:return t.length===1?"Item":"Items"}};return{addToPlaylist:async(t,e)=>{if(!(t.is_smart||e.length===0))try{await c.addContent(t,e),a.emit("PLAYLIST_UPDATED",t),n(`${s(e)} added into "${t.name}."`)}catch(o){r(o)}},removeFromPlaylist:async(t,e)=>{if(!t.is_smart)try{await c.removeContent(t,e),a.emit("PLAYLIST_CONTENT_REMOVED",t,e),n(`${s(e)} removed from "${t.name}."`)}catch(o){r(o)}}}};export{C as M,I as u};

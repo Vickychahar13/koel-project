@@ -1,0 +1,1 @@
+import{a8 as e}from"./index-HIGCDqEt.js";import{g as n,i as a,o as t,j as s,y as c,p as r}from"./socketService-CLOoMCW2.js";const p={class:"!opacity-50"},u=n({__name:"ExternalMark",setup(_){return(i,m)=>{const o=a("Icon");return t(),s("span",p,[c(o,{icon:r(e)},null,8,["icon"])])}}});export{u as _};

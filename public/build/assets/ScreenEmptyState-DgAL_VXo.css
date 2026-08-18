@@ -1,0 +1,1 @@
+.text a{color:color-mix(in srgb,var(--color-fg),transparent 80%)}.text a:hover{color:var(--color-fg)}.text .secondary{font-size:1.5rem;line-height:2rem}.text .secondary{font-weight:100}

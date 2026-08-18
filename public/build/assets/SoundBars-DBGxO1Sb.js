@@ -1,0 +1,1 @@
+import{_ as t,o as e,j as a,F as n,B as r,k as c}from"./socketService-CLOoMCW2.js";const o={},_={class:"relative flex gap-1 content-between w-[13px] aspect-square"};function d(l,p){return e(),a("i",_,[(e(),a(n,null,r(3,s=>c("span",{key:s})),64))])}const i=t(o,[["render",d],["__scopeId","data-v-55663067"]]);export{i as default};

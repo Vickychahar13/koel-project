@@ -1,0 +1,1 @@
+import{_ as n,o as r,j as t,k as s,a2 as a}from"./socketService-CLOoMCW2.js";const o={},d={class:"tabs"};function c(e,l){return r(),t("div",d,[s("header",null,[a(e.$slots,"header",{},void 0,!0)]),s("main",null,[a(e.$slots,"default",{},void 0,!0)])])}const u=n(o,[["render",c],["__scopeId","data-v-b9aed514"]]);export{u as S};

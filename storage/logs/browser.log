@@ -1,0 +1,56 @@
+[2026-08-18 15:29:04] production.ERROR: [koel] Request failed with status code 401 AxiosError AxiosError: Request failed with status code 401
+    at Am (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:1091)
+    at XMLHttpRequest.O (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:5953)
+    at lo.request (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:615:2094)
+    at async r5.post (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:13737)
+    at async Object.login (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:5672)
+    at async Object.onSubmit (http://127.0.0.1:8000/build/assets/LoginForm-DATrTaZ1.js:1:3075)
+    at async handleSubmit (http://127.0.0.1:8000/build/assets/useForm-Dgd7JZ06.js:1:559) true true false true xhr http fetch null null 0 XSRF-TOKEN X-XSRF-TOKEN -1 -1  application/json, text/plain, */* application/json v7 Bearer null http://127.0.0.1:8000/api me {"email":"vickychahar13@gmail.com","password":"Vicky@1234"} post true ERR_BAD_REQUEST 401 {"url":"http://127.0.0.1:8000/#/home","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-18T15:29:03.316Z"} 
+[2026-08-18 15:35:20] production.ERROR: [koel] Request failed with status code 401 AxiosError AxiosError: Request failed with status code 401
+    at Am (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:1091)
+    at XMLHttpRequest.O (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:5953)
+    at lo.request (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:615:2094)
+    at async r5.post (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:13737)
+    at async Object.login (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:5672)
+    at async Object.onSubmit (http://127.0.0.1:8000/build/assets/LoginForm-DATrTaZ1.js:1:3075)
+    at async handleSubmit (http://127.0.0.1:8000/build/assets/useForm-Dgd7JZ06.js:1:559) true true false true xhr http fetch null null 0 XSRF-TOKEN X-XSRF-TOKEN -1 -1  application/json, text/plain, */* application/json v7 Bearer null http://127.0.0.1:8000/api me {"email":"vickychahar275@gmail.com","password":"Vicky@2004"} post true ERR_BAD_REQUEST 401 {"url":"http://127.0.0.1:8000/#/home","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-18T15:35:18.819Z"} 
+[2026-08-18 15:36:11] production.ERROR: [koel] Request failed with status code 401 AxiosError AxiosError: Request failed with status code 401
+    at Am (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:1091)
+    at XMLHttpRequest.O (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:5953)
+    at lo.request (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:615:2094)
+    at async r5.post (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:13737)
+    at async Object.login (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:5672)
+    at async Object.onSubmit (http://127.0.0.1:8000/build/assets/LoginForm-DATrTaZ1.js:1:3075)
+    at async handleSubmit (http://127.0.0.1:8000/build/assets/useForm-Dgd7JZ06.js:1:559) true true false true xhr http fetch null null 0 XSRF-TOKEN X-XSRF-TOKEN -1 -1  application/json, text/plain, */* application/json v7 Bearer null http://127.0.0.1:8000/api me {"email":"vickychahar275@gmail.com","password":"Vicky@2004"} post true ERR_BAD_REQUEST 401 {"url":"http://127.0.0.1:8000/#/home","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-18T15:36:10.979Z"} 
+[2026-08-18 15:36:15] production.ERROR: [koel] Request failed with status code 401 AxiosError AxiosError: Request failed with status code 401
+    at Am (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:1091)
+    at XMLHttpRequest.O (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:5953)
+    at lo.request (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:615:2094)
+    at async r5.post (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:13737)
+    at async Object.login (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:5672)
+    at async Object.onSubmit (http://127.0.0.1:8000/build/assets/LoginForm-DATrTaZ1.js:1:3075)
+    at async handleSubmit (http://127.0.0.1:8000/build/assets/useForm-Dgd7JZ06.js:1:559) true true false true xhr http fetch null null 0 XSRF-TOKEN X-XSRF-TOKEN -1 -1  application/json, text/plain, */* application/json v7 Bearer null http://127.0.0.1:8000/api me {"email":"vickychahar275@gmail.com","password":"Vicky@2004"} post true ERR_BAD_REQUEST 401 {"url":"http://127.0.0.1:8000/#/home","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-18T15:36:14.716Z"} 
+[2026-08-18 15:36:21] production.ERROR: [koel] Request failed with status code 401 AxiosError AxiosError: Request failed with status code 401
+    at Am (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:1091)
+    at XMLHttpRequest.O (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:5953)
+    at lo.request (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:615:2094)
+    at async r5.post (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:13737)
+    at async Object.login (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:5672)
+    at async Object.onSubmit (http://127.0.0.1:8000/build/assets/LoginForm-DATrTaZ1.js:1:3075)
+    at async handleSubmit (http://127.0.0.1:8000/build/assets/useForm-Dgd7JZ06.js:1:559) true true false true xhr http fetch null null 0 XSRF-TOKEN X-XSRF-TOKEN -1 -1  application/json, text/plain, */* application/json v7 Bearer null http://127.0.0.1:8000/api me {"email":"vickychahar275@gmail.com","password":"Vicky@2004"} post true ERR_BAD_REQUEST 401 {"url":"http://127.0.0.1:8000/#/home","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-18T15:36:20.383Z"} 
+[2026-08-18 15:36:57] production.ERROR: [koel] Request failed with status code 401 AxiosError AxiosError: Request failed with status code 401
+    at Am (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:1091)
+    at XMLHttpRequest.O (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:5953)
+    at lo.request (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:615:2094)
+    at async r5.post (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:13737)
+    at async Object.login (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:5672)
+    at async Object.onSubmit (http://127.0.0.1:8000/build/assets/LoginForm-DATrTaZ1.js:1:3075)
+    at async handleSubmit (http://127.0.0.1:8000/build/assets/useForm-Dgd7JZ06.js:1:559) true true false true xhr http fetch null null 0 XSRF-TOKEN X-XSRF-TOKEN -1 -1  application/json, text/plain, */* application/json v7 Bearer null http://127.0.0.1:8000/api me {"email":"vickychahar275@gmail.com","password":"Vicky@2004"} post true ERR_BAD_REQUEST 401 {"url":"http://127.0.0.1:8000/#/home","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-18T15:36:56.282Z"} 
+[2026-08-18 15:37:00] production.ERROR: [koel] Request failed with status code 401 AxiosError AxiosError: Request failed with status code 401
+    at Am (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:1091)
+    at XMLHttpRequest.O (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:613:5953)
+    at lo.request (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:615:2094)
+    at async r5.post (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:13737)
+    at async Object.login (http://127.0.0.1:8000/build/assets/socketService-CLOoMCW2.js:617:5672)
+    at async Object.onSubmit (http://127.0.0.1:8000/build/assets/LoginForm-DATrTaZ1.js:1:3075)
+    at async handleSubmit (http://127.0.0.1:8000/build/assets/useForm-Dgd7JZ06.js:1:559) true true false true xhr http fetch null null 0 XSRF-TOKEN X-XSRF-TOKEN -1 -1  application/json, text/plain, */* application/json v7 Bearer null http://127.0.0.1:8000/api me {"email":"vickychahar275@gmail.com","password":"Vicky@2004"} post true ERR_BAD_REQUEST 401 {"url":"http://127.0.0.1:8000/#/home","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36","timestamp":"2026-08-18T15:36:59.614Z"} 

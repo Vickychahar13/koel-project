@@ -1,0 +1,1 @@
+import{a6 as s}from"./index-HIGCDqEt.js";import{g as o,G as n,aa as f}from"./socketService-CLOoMCW2.js";const m=o({name:"OnClickOutside",props:["as","options"],emits:["trigger"],setup(t,{slots:e,emit:a}){const i=f();return s(i,r=>{a("trigger",r)},t.options),()=>{if(e.default)return n(t.as||"div",{ref:i},e.default())}}});export{m as O};

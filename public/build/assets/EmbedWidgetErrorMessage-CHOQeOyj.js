@@ -1,0 +1,1 @@
+import{_ as e,o as t,j as c}from"./socketService-CLOoMCW2.js";const s={},n={class:"h-screen flex flex-col items-center justify-center text-xl uppercase tracking-widest opacity-70"};function o(r,a){return t(),c("section",n," Content not available ")}const l=e(s,[["render",o]]);export{l as default};
